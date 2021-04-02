@@ -109,6 +109,7 @@
 
 #previewer {
   background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 4em;
   position: fixed;
   top: 0;
   left: 0;
@@ -123,20 +124,25 @@
   color: #fff;
 }
 
-#previewer .action i {
+#previewer header > .action i {
   color: #fff;
 }
 
-#previewer .action:hover {
+@media (min-width: 738px) {
+  #previewer header #dropdown .action i {
+    color: #fff;
+  }
+}
+
+#previewer header .action:hover {
   background-color: rgba(255, 255, 255, 0.3)
 }
 
-#previewer .action span {
+#previewer header .action span {
   display: none;
 }
 
 #previewer .preview {
-  margin-top: 4em;
   text-align: center;
   height: calc(100vh - 4em);
 }
@@ -203,7 +209,7 @@
 #editor-container {
   background-color: #fafafa;
   position: fixed;
-  margin-top: 4em;
+  padding-top: 4em;
   top: 0;
   left: 0;
   width: 100%;
